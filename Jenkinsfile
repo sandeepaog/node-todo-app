@@ -12,8 +12,10 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    // Build the Docker image
-                    docker.build("node-todo-app:v1")
+                    sh '''
+                    echo 'Build Docker Image'
+                    docker build -t sandeepaog996/node-todo-app:v1 .
+                    '''
                 }
             }
         }
