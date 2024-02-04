@@ -20,10 +20,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                script {
-                    // Run tests if applicable
-                    // Add your test commands here
-                }
+                
             }
         }
 
