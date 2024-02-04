@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     // Build the Docker image
-                    docker.build("node-todo-app")
+                    docker.build("node-todo-app:v1")
                 }
             }
         }
