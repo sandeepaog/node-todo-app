@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     // Build the Docker image
-                    docker.build("node-todo-app:v1")
+                    docker.build("node-todo-app")
                 }
             }
         }
@@ -32,7 +32,7 @@ pipeline {
                 script {
                     // Tag the Docker image for Docker Hub
                     docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
-                        docker.image("node-todo-app:v1").push()
+                        docker.image("node-todo-app").push()
                     }
                 }
             }
